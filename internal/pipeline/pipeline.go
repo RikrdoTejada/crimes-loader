@@ -32,7 +32,7 @@ func (p *Pipeline) Run(csvPath, outputDir string) error {
 		return fmt.Errorf("no se puede crear directorio de salida: %w", err)
 	}
 
-	fmt.Printf("\n🚀 Iniciando carga concurrente del dataset de Chicago Crimes\n")
+	fmt.Printf("\nIniciando carga concurrente del dataset de Chicago Crimes\n")
 	fmt.Printf("   Archivo    : %s\n", csvPath)
 	fmt.Printf("   Workers    : %d goroutines\n", p.cfg.NumWorkers)
 	fmt.Printf("   Chunk size : %d líneas por bloque\n", p.cfg.ChunkSize)
@@ -50,7 +50,7 @@ func (p *Pipeline) Run(csvPath, outputDir string) error {
 	if err := writeJSON(statsPath, stats); err != nil {
 		return err
 	}
-	fmt.Printf("\n📊 Estadísticas guardadas en: %s\n", statsPath)
+	fmt.Printf("\n Estadísticas guardadas en: %s\n", statsPath)
 
 	// ── Análisis de zonas y franjas horarias ─────────────────────────────────
 	analysis := analyzeRiskZones(records)
@@ -58,7 +58,7 @@ func (p *Pipeline) Run(csvPath, outputDir string) error {
 	if err := writeJSON(analysisPath, analysis); err != nil {
 		return err
 	}
-	fmt.Printf("🗺️  Análisis de riesgo guardado en: %s\n", analysisPath)
+	fmt.Printf("  Análisis de riesgo guardado en: %s\n", analysisPath)
 
 	// ── Guardar muestra de registros limpios (primeros 10 000) ──────────────
 	sampleSize := 10_000
@@ -69,9 +69,9 @@ func (p *Pipeline) Run(csvPath, outputDir string) error {
 	if err := writeJSON(samplePath, records[:sampleSize]); err != nil {
 		return err
 	}
-	fmt.Printf("📁 Muestra de %d registros limpios en: %s\n", sampleSize, samplePath)
+	fmt.Printf(" Muestra de %d registros limpios en: %s\n", sampleSize, samplePath)
 
-	fmt.Printf("\n✅ Pipeline completado exitosamente.\n")
+	fmt.Printf("\n Pipeline completado exitosamente.\n")
 	printRiskSummary(analysis)
 	return nil
 }
@@ -80,31 +80,31 @@ func (p *Pipeline) Run(csvPath, outputDir string) error {
 
 // RiskAnalysis contiene el resultado del análisis de zonas y franjas horarias.
 type RiskAnalysis struct {
-	GeneratedAt       time.Time           `json:"generated_at"`
-	TotalRecords      int                 `json:"total_records"`
-	CrimesByHour      map[int]int         `json:"crimes_by_hour"`
-	CrimesByDistrict  map[int]int         `json:"crimes_by_district"`
-	CrimesByDayOfWeek map[int]int         `json:"crimes_by_day_of_week"`
-	CrimesByType      map[string]int      `json:"crimes_by_type"`
-	TopRiskHours      []HourRisk          `json:"top_risk_hours"`
-	TopRiskDistricts  []DistrictRisk      `json:"top_risk_districts"`
-	HeatmapData       []HeatmapCell       `json:"heatmap_data"`
+	GeneratedAt       time.Time      `json:"generated_at"`
+	TotalRecords      int            `json:"total_records"`
+	CrimesByHour      map[int]int    `json:"crimes_by_hour"`
+	CrimesByDistrict  map[int]int    `json:"crimes_by_district"`
+	CrimesByDayOfWeek map[int]int    `json:"crimes_by_day_of_week"`
+	CrimesByType      map[string]int `json:"crimes_by_type"`
+	TopRiskHours      []HourRisk     `json:"top_risk_hours"`
+	TopRiskDistricts  []DistrictRisk `json:"top_risk_districts"`
+	HeatmapData       []HeatmapCell  `json:"heatmap_data"`
 }
 
 // HourRisk representa la peligrosidad de una franja horaria.
 type HourRisk struct {
-	Hour          int     `json:"hour"`
-	CrimeCount    int     `json:"crime_count"`
-	RiskScore     float64 `json:"risk_score"` // normalizado 0-1
-	MostCommonType string `json:"most_common_type"`
+	Hour           int     `json:"hour"`
+	CrimeCount     int     `json:"crime_count"`
+	RiskScore      float64 `json:"risk_score"` // normalizado 0-1
+	MostCommonType string  `json:"most_common_type"`
 }
 
 // DistrictRisk representa el nivel de crimen de un distrito.
 type DistrictRisk struct {
-	District      int     `json:"district"`
-	CrimeCount    int     `json:"crime_count"`
-	RiskScore     float64 `json:"risk_score"`
-	ArrestRate    float64 `json:"arrest_rate"`
+	District   int     `json:"district"`
+	CrimeCount int     `json:"crime_count"`
+	RiskScore  float64 `json:"risk_score"`
+	ArrestRate float64 `json:"arrest_rate"`
 }
 
 // HeatmapCell es una celda del mapa de calor hora × distrito.

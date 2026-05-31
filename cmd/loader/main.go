@@ -46,7 +46,7 @@ func main() {
 
 	// Verificar que el archivo existe
 	if _, err := os.Stat(*fileFlag); os.IsNotExist(err) {
-		log.Printf("⚠️  Archivo no encontrado: %s", *fileFlag)
+		log.Printf("  Archivo no encontrado: %s", *fileFlag)
 		log.Println("   Generando dataset sintético de prueba (100 000 registros)...")
 		if err := generateSyntheticCSV(*fileFlag, 100_000); err != nil {
 			log.Fatalf("Error generando dataset de prueba: %v", err)
@@ -69,14 +69,14 @@ func main() {
 	// ── Pipeline normal ──────────────────────────────────────────────────────
 	p := pipeline.New(cfg)
 	if err := p.Run(*fileFlag, *outputFlag); err != nil {
-		log.Fatalf("❌ Error en el pipeline: %v", err)
+		log.Fatalf(" Error en el pipeline: %v", err)
 	}
 }
 
 // runBenchmark compara el rendimiento entre 1 worker (pseudo-secuencial)
 // y N workers (concurrente) para demostrar el speedup obtenido.
 func runBenchmark(csvPath string, cfg loader.Config) {
-	fmt.Println("\n⏱️  MODO BENCHMARK: Comparativa secuencial vs. concurrente")
+	fmt.Println("\n  MODO BENCHMARK: Comparativa secuencial vs. concurrente")
 	fmt.Println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 
 	workerCounts := []int{1, 2, 4, cfg.NumWorkers}
