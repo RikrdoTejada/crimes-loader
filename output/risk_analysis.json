@@ -1,0 +1,1168 @@
+{
+  "generated_at": "2026-05-31T14:12:34.163652-05:00",
+  "total_records": 8562865,
+  "crimes_by_hour": {
+    "0": 500929,
+    "1": 272415,
+    "10": 363457,
+    "11": 379343,
+    "12": 491530,
+    "13": 404666,
+    "14": 429661,
+    "15": 456461,
+    "16": 434483,
+    "17": 441366,
+    "18": 466604,
+    "19": 478385,
+    "2": 230941,
+    "20": 474909,
+    "21": 458890,
+    "22": 450524,
+    "23": 377420,
+    "3": 188439,
+    "4": 144327,
+    "5": 121098,
+    "6": 139926,
+    "7": 197729,
+    "8": 290301,
+    "9": 369061
+  },
+  "crimes_by_district": {
+    "0": 47,
+    "1": 358645,
+    "10": 367156,
+    "11": 541777,
+    "12": 434262,
+    "14": 329281,
+    "15": 359346,
+    "16": 287937,
+    "17": 248317,
+    "18": 390467,
+    "19": 391205,
+    "2": 409259,
+    "20": 154265,
+    "21": 4,
+    "22": 279427,
+    "24": 261308,
+    "25": 482758,
+    "3": 435126,
+    "31": 277,
+    "4": 484513,
+    "5": 375706,
+    "6": 499986,
+    "7": 482827,
+    "8": 573839,
+    "9": 415130
+  },
+  "crimes_by_day_of_week": {
+    "0": 1169149,
+    "1": 1211425,
+    "2": 1222024,
+    "3": 1230166,
+    "4": 1217987,
+    "5": 1284243,
+    "6": 1227871
+  },
+  "crimes_by_type": {
+    "ARSON": 14628,
+    "ASSAULT": 576590,
+    "BATTERY": 1559656,
+    "BURGLARY": 452925,
+    "CONCEALED CARRY LICENSE VIOLATION": 1763,
+    "CRIM SEXUAL ASSAULT": 27224,
+    "CRIMINAL DAMAGE": 973039,
+    "CRIMINAL SEXUAL ASSAULT": 12645,
+    "CRIMINAL TRESPASS": 229972,
+    "DECEPTIVE PRACTICE": 397543,
+    "DOMESTIC VIOLENCE": 1,
+    "GAMBLING": 14667,
+    "HOMICIDE": 14241,
+    "HUMAN TRAFFICKING": 150,
+    "INTERFERENCE WITH PUBLIC OFFICER": 20769,
+    "INTIMIDATION": 5243,
+    "KIDNAPPING": 7553,
+    "LIQUOR LAW VIOLATION": 15493,
+    "MOTOR VEHICLE THEFT": 441587,
+    "NARCOTICS": 767689,
+    "NON-CRIMINAL": 27,
+    "OBSCENITY": 986,
+    "OFFENSE INVOLVING CHILDREN": 61567,
+    "OTHER NARCOTIC VIOLATION": 167,
+    "OTHER OFFENSE": 534994,
+    "PROSTITUTION": 70506,
+    "PUBLIC INDECENCY": 231,
+    "PUBLIC PEACE VIOLATION": 55426,
+    "RITUALISM": 24,
+    "ROBBERY": 317286,
+    "SEX OFFENSE": 35101,
+    "STALKING": 6522,
+    "THEFT": 1819062,
+    "WEAPONS VIOLATION": 127588
+  },
+  "top_risk_hours": [
+    {
+      "hour": 0,
+      "crime_count": 500929,
+      "risk_score": 1,
+      "most_common_type": "THEFT"
+    },
+    {
+      "hour": 12,
+      "crime_count": 491530,
+      "risk_score": 0.98,
+      "most_common_type": "THEFT"
+    },
+    {
+      "hour": 19,
+      "crime_count": 478385,
+      "risk_score": 0.95,
+      "most_common_type": "THEFT"
+    },
+    {
+      "hour": 20,
+      "crime_count": 474909,
+      "risk_score": 0.95,
+      "most_common_type": "THEFT"
+    },
+    {
+      "hour": 18,
+      "crime_count": 466604,
+      "risk_score": 0.93,
+      "most_common_type": "THEFT"
+    }
+  ],
+  "top_risk_districts": [
+    {
+      "district": 8,
+      "crime_count": 573839,
+      "risk_score": 1,
+      "arrest_rate": 0.22
+    },
+    {
+      "district": 11,
+      "crime_count": 541777,
+      "risk_score": 0.94,
+      "arrest_rate": 0.41
+    },
+    {
+      "district": 6,
+      "crime_count": 499986,
+      "risk_score": 0.87,
+      "arrest_rate": 0.25
+    },
+    {
+      "district": 4,
+      "crime_count": 484513,
+      "risk_score": 0.84,
+      "arrest_rate": 0.21
+    },
+    {
+      "district": 7,
+      "crime_count": 482827,
+      "risk_score": 0.84,
+      "arrest_rate": 0.27
+    }
+  ],
+  "heatmap_data": [
+    {
+      "hour": 0,
+      "district": 8,
+      "count": 35425
+    },
+    {
+      "hour": 19,
+      "district": 11,
+      "count": 34105
+    },
+    {
+      "hour": 12,
+      "district": 8,
+      "count": 32381
+    },
+    {
+      "hour": 20,
+      "district": 11,
+      "count": 32029
+    },
+    {
+      "hour": 20,
+      "district": 8,
+      "count": 32004
+    },
+    {
+      "hour": 19,
+      "district": 8,
+      "count": 31928
+    },
+    {
+      "hour": 12,
+      "district": 11,
+      "count": 31856
+    },
+    {
+      "hour": 18,
+      "district": 8,
+      "count": 31620
+    },
+    {
+      "hour": 21,
+      "district": 8,
+      "count": 31235
+    },
+    {
+      "hour": 22,
+      "district": 8,
+      "count": 31061
+    },
+    {
+      "hour": 15,
+      "district": 8,
+      "count": 30085
+    },
+    {
+      "hour": 11,
+      "district": 11,
+      "count": 29839
+    },
+    {
+      "hour": 0,
+      "district": 6,
+      "count": 29819
+    },
+    {
+      "hour": 17,
+      "district": 8,
+      "count": 29556
+    },
+    {
+      "hour": 18,
+      "district": 11,
+      "count": 29275
+    },
+    {
+      "hour": 16,
+      "district": 8,
+      "count": 29265
+    },
+    {
+      "hour": 0,
+      "district": 25,
+      "count": 29233
+    },
+    {
+      "hour": 0,
+      "district": 4,
+      "count": 29057
+    },
+    {
+      "hour": 21,
+      "district": 11,
+      "count": 28959
+    },
+    {
+      "hour": 15,
+      "district": 11,
+      "count": 28351
+    },
+    {
+      "hour": 12,
+      "district": 4,
+      "count": 28205
+    },
+    {
+      "hour": 14,
+      "district": 8,
+      "count": 28164
+    },
+    {
+      "hour": 16,
+      "district": 11,
+      "count": 28065
+    },
+    {
+      "hour": 12,
+      "district": 6,
+      "count": 28043
+    },
+    {
+      "hour": 12,
+      "district": 1,
+      "count": 27505
+    },
+    {
+      "hour": 20,
+      "district": 25,
+      "count": 27443
+    },
+    {
+      "hour": 21,
+      "district": 25,
+      "count": 27426
+    },
+    {
+      "hour": 10,
+      "district": 11,
+      "count": 27215
+    },
+    {
+      "hour": 0,
+      "district": 7,
+      "count": 27212
+    },
+    {
+      "hour": 22,
+      "district": 11,
+      "count": 27178
+    },
+    {
+      "hour": 22,
+      "district": 25,
+      "count": 27119
+    },
+    {
+      "hour": 12,
+      "district": 7,
+      "count": 27083
+    },
+    {
+      "hour": 20,
+      "district": 6,
+      "count": 27032
+    },
+    {
+      "hour": 19,
+      "district": 7,
+      "count": 26923
+    },
+    {
+      "hour": 17,
+      "district": 11,
+      "count": 26893
+    },
+    {
+      "hour": 20,
+      "district": 7,
+      "count": 26851
+    },
+    {
+      "hour": 13,
+      "district": 11,
+      "count": 26823
+    },
+    {
+      "hour": 19,
+      "district": 6,
+      "count": 26776
+    },
+    {
+      "hour": 14,
+      "district": 11,
+      "count": 26705
+    },
+    {
+      "hour": 0,
+      "district": 19,
+      "count": 26688
+    },
+    {
+      "hour": 21,
+      "district": 7,
+      "count": 26682
+    },
+    {
+      "hour": 20,
+      "district": 4,
+      "count": 26600
+    },
+    {
+      "hour": 0,
+      "district": 12,
+      "count": 26574
+    },
+    {
+      "hour": 19,
+      "district": 25,
+      "count": 26552
+    },
+    {
+      "hour": 15,
+      "district": 6,
+      "count": 26517
+    },
+    {
+      "hour": 22,
+      "district": 6,
+      "count": 26469
+    },
+    {
+      "hour": 21,
+      "district": 6,
+      "count": 26325
+    },
+    {
+      "hour": 21,
+      "district": 4,
+      "count": 26267
+    },
+    {
+      "hour": 12,
+      "district": 25,
+      "count": 26194
+    },
+    {
+      "hour": 22,
+      "district": 7,
+      "count": 26163
+    },
+    {
+      "hour": 18,
+      "district": 7,
+      "count": 25962
+    },
+    {
+      "hour": 0,
+      "district": 11,
+      "count": 25935
+    },
+    {
+      "hour": 18,
+      "district": 25,
+      "count": 25861
+    },
+    {
+      "hour": 22,
+      "district": 4,
+      "count": 25683
+    },
+    {
+      "hour": 16,
+      "district": 6,
+      "count": 25665
+    },
+    {
+      "hour": 13,
+      "district": 8,
+      "count": 25649
+    },
+    {
+      "hour": 15,
+      "district": 4,
+      "count": 25516
+    },
+    {
+      "hour": 15,
+      "district": 7,
+      "count": 25432
+    },
+    {
+      "hour": 18,
+      "district": 6,
+      "count": 25419
+    },
+    {
+      "hour": 19,
+      "district": 4,
+      "count": 25418
+    },
+    {
+      "hour": 17,
+      "district": 6,
+      "count": 25254
+    },
+    {
+      "hour": 23,
+      "district": 8,
+      "count": 25131
+    },
+    {
+      "hour": 15,
+      "district": 25,
+      "count": 25035
+    },
+    {
+      "hour": 0,
+      "district": 9,
+      "count": 24996
+    },
+    {
+      "hour": 18,
+      "district": 4,
+      "count": 24915
+    },
+    {
+      "hour": 19,
+      "district": 3,
+      "count": 24621
+    },
+    {
+      "hour": 17,
+      "district": 7,
+      "count": 24523
+    },
+    {
+      "hour": 16,
+      "district": 7,
+      "count": 24502
+    },
+    {
+      "hour": 14,
+      "district": 7,
+      "count": 24496
+    },
+    {
+      "hour": 20,
+      "district": 3,
+      "count": 24358
+    },
+    {
+      "hour": 20,
+      "district": 9,
+      "count": 24340
+    },
+    {
+      "hour": 16,
+      "district": 4,
+      "count": 24281
+    },
+    {
+      "hour": 14,
+      "district": 4,
+      "count": 24204
+    },
+    {
+      "hour": 12,
+      "district": 3,
+      "count": 24172
+    },
+    {
+      "hour": 19,
+      "district": 12,
+      "count": 24161
+    },
+    {
+      "hour": 14,
+      "district": 6,
+      "count": 24067
+    },
+    {
+      "hour": 20,
+      "district": 12,
+      "count": 24019
+    },
+    {
+      "hour": 12,
+      "district": 12,
+      "count": 23996
+    },
+    {
+      "hour": 19,
+      "district": 9,
+      "count": 23970
+    },
+    {
+      "hour": 0,
+      "district": 3,
+      "count": 23954
+    },
+    {
+      "hour": 17,
+      "district": 4,
+      "count": 23911
+    },
+    {
+      "hour": 12,
+      "district": 2,
+      "count": 23842
+    },
+    {
+      "hour": 17,
+      "district": 25,
+      "count": 23821
+    },
+    {
+      "hour": 14,
+      "district": 25,
+      "count": 23821
+    },
+    {
+      "hour": 21,
+      "district": 9,
+      "count": 23747
+    },
+    {
+      "hour": 18,
+      "district": 3,
+      "count": 23683
+    },
+    {
+      "hour": 9,
+      "district": 8,
+      "count": 23633
+    },
+    {
+      "hour": 9,
+      "district": 11,
+      "count": 23604
+    },
+    {
+      "hour": 13,
+      "district": 1,
+      "count": 23596
+    },
+    {
+      "hour": 16,
+      "district": 25,
+      "count": 23525
+    },
+    {
+      "hour": 11,
+      "district": 8,
+      "count": 23487
+    },
+    {
+      "hour": 13,
+      "district": 7,
+      "count": 23468
+    },
+    {
+      "hour": 15,
+      "district": 1,
+      "count": 23452
+    },
+    {
+      "hour": 21,
+      "district": 3,
+      "count": 23447
+    },
+    {
+      "hour": 17,
+      "district": 1,
+      "count": 23434
+    },
+    {
+      "hour": 22,
+      "district": 9,
+      "count": 23308
+    },
+    {
+      "hour": 22,
+      "district": 12,
+      "count": 23256
+    },
+    {
+      "hour": 18,
+      "district": 9,
+      "count": 23248
+    },
+    {
+      "hour": 15,
+      "district": 3,
+      "count": 23200
+    },
+    {
+      "hour": 16,
+      "district": 1,
+      "count": 23186
+    },
+    {
+      "hour": 15,
+      "district": 2,
+      "count": 23142
+    },
+    {
+      "hour": 21,
+      "district": 12,
+      "count": 23137
+    },
+    {
+      "hour": 18,
+      "district": 18,
+      "count": 23130
+    },
+    {
+      "hour": 18,
+      "district": 12,
+      "count": 23109
+    },
+    {
+      "hour": 14,
+      "district": 1,
+      "count": 23099
+    },
+    {
+      "hour": 13,
+      "district": 6,
+      "count": 23058
+    },
+    {
+      "hour": 0,
+      "district": 18,
+      "count": 23027
+    },
+    {
+      "hour": 23,
+      "district": 6,
+      "count": 22946
+    },
+    {
+      "hour": 22,
+      "district": 3,
+      "count": 22938
+    },
+    {
+      "hour": 12,
+      "district": 19,
+      "count": 22852
+    },
+    {
+      "hour": 11,
+      "district": 6,
+      "count": 22848
+    },
+    {
+      "hour": 13,
+      "district": 4,
+      "count": 22847
+    },
+    {
+      "hour": 23,
+      "district": 7,
+      "count": 22823
+    },
+    {
+      "hour": 19,
+      "district": 2,
+      "count": 22764
+    },
+    {
+      "hour": 23,
+      "district": 11,
+      "count": 22745
+    },
+    {
+      "hour": 17,
+      "district": 18,
+      "count": 22707
+    },
+    {
+      "hour": 16,
+      "district": 3,
+      "count": 22706
+    },
+    {
+      "hour": 10,
+      "district": 8,
+      "count": 22680
+    },
+    {
+      "hour": 23,
+      "district": 25,
+      "count": 22589
+    },
+    {
+      "hour": 17,
+      "district": 3,
+      "count": 22553
+    },
+    {
+      "hour": 15,
+      "district": 12,
+      "count": 22531
+    },
+    {
+      "hour": 12,
+      "district": 9,
+      "count": 22329
+    },
+    {
+      "hour": 18,
+      "district": 19,
+      "count": 22241
+    },
+    {
+      "hour": 18,
+      "district": 2,
+      "count": 22179
+    },
+    {
+      "hour": 15,
+      "district": 18,
+      "count": 22145
+    },
+    {
+      "hour": 9,
+      "district": 6,
+      "count": 22113
+    },
+    {
+      "hour": 11,
+      "district": 7,
+      "count": 22016
+    },
+    {
+      "hour": 20,
+      "district": 2,
+      "count": 21991
+    },
+    {
+      "hour": 12,
+      "district": 18,
+      "count": 21957
+    },
+    {
+      "hour": 9,
+      "district": 4,
+      "count": 21920
+    },
+    {
+      "hour": 0,
+      "district": 2,
+      "count": 21881
+    },
+    {
+      "hour": 17,
+      "district": 12,
+      "count": 21799
+    },
+    {
+      "hour": 19,
+      "district": 18,
+      "count": 21777
+    },
+    {
+      "hour": 12,
+      "district": 5,
+      "count": 21770
+    },
+    {
+      "hour": 10,
+      "district": 6,
+      "count": 21722
+    },
+    {
+      "hour": 20,
+      "district": 10,
+      "count": 21703
+    },
+    {
+      "hour": 23,
+      "district": 4,
+      "count": 21691
+    },
+    {
+      "hour": 19,
+      "district": 19,
+      "count": 21678
+    },
+    {
+      "hour": 15,
+      "district": 9,
+      "count": 21646
+    },
+    {
+      "hour": 13,
+      "district": 25,
+      "count": 21616
+    },
+    {
+      "hour": 14,
+      "district": 3,
+      "count": 21609
+    },
+    {
+      "hour": 17,
+      "district": 9,
+      "count": 21597
+    },
+    {
+      "hour": 11,
+      "district": 4,
+      "count": 21583
+    },
+    {
+      "hour": 19,
+      "district": 10,
+      "count": 21547
+    },
+    {
+      "hour": 10,
+      "district": 4,
+      "count": 21506
+    },
+    {
+      "hour": 0,
+      "district": 14,
+      "count": 21382
+    },
+    {
+      "hour": 0,
+      "district": 5,
+      "count": 21377
+    },
+    {
+      "hour": 20,
+      "district": 19,
+      "count": 21373
+    },
+    {
+      "hour": 16,
+      "district": 2,
+      "count": 21356
+    },
+    {
+      "hour": 14,
+      "district": 12,
+      "count": 21339
+    },
+    {
+      "hour": 20,
+      "district": 5,
+      "count": 21336
+    },
+    {
+      "hour": 21,
+      "district": 10,
+      "count": 21283
+    },
+    {
+      "hour": 16,
+      "district": 18,
+      "count": 21262
+    },
+    {
+      "hour": 14,
+      "district": 2,
+      "count": 21240
+    },
+    {
+      "hour": 16,
+      "district": 9,
+      "count": 21227
+    },
+    {
+      "hour": 17,
+      "district": 2,
+      "count": 21224
+    },
+    {
+      "hour": 18,
+      "district": 1,
+      "count": 21146
+    },
+    {
+      "hour": 21,
+      "district": 5,
+      "count": 21141
+    },
+    {
+      "hour": 14,
+      "district": 18,
+      "count": 21125
+    },
+    {
+      "hour": 17,
+      "district": 19,
+      "count": 21068
+    },
+    {
+      "hour": 9,
+      "district": 25,
+      "count": 21021
+    },
+    {
+      "hour": 19,
+      "district": 15,
+      "count": 20954
+    },
+    {
+      "hour": 21,
+      "district": 2,
+      "count": 20927
+    },
+    {
+      "hour": 12,
+      "district": 15,
+      "count": 20899
+    },
+    {
+      "hour": 11,
+      "district": 25,
+      "count": 20797
+    },
+    {
+      "hour": 10,
+      "district": 7,
+      "count": 20791
+    },
+    {
+      "hour": 19,
+      "district": 5,
+      "count": 20749
+    },
+    {
+      "hour": 0,
+      "district": 10,
+      "count": 20745
+    },
+    {
+      "hour": 22,
+      "district": 5,
+      "count": 20678
+    },
+    {
+      "hour": 16,
+      "district": 12,
+      "count": 20460
+    },
+    {
+      "hour": 18,
+      "district": 10,
+      "count": 20448
+    },
+    {
+      "hour": 22,
+      "district": 10,
+      "count": 20427
+    },
+    {
+      "hour": 9,
+      "district": 2,
+      "count": 20400
+    },
+    {
+      "hour": 12,
+      "district": 10,
+      "count": 20358
+    },
+    {
+      "hour": 13,
+      "district": 2,
+      "count": 20328
+    },
+    {
+      "hour": 18,
+      "district": 5,
+      "count": 20249
+    },
+    {
+      "hour": 20,
+      "district": 15,
+      "count": 20231
+    },
+    {
+      "hour": 21,
+      "district": 19,
+      "count": 20226
+    },
+    {
+      "hour": 0,
+      "district": 16,
+      "count": 20140
+    },
+    {
+      "hour": 13,
+      "district": 3,
+      "count": 20091
+    },
+    {
+      "hour": 22,
+      "district": 19,
+      "count": 19998
+    },
+    {
+      "hour": 11,
+      "district": 2,
+      "count": 19952
+    },
+    {
+      "hour": 13,
+      "district": 12,
+      "count": 19938
+    },
+    {
+      "hour": 10,
+      "district": 25,
+      "count": 19900
+    },
+    {
+      "hour": 14,
+      "district": 9,
+      "count": 19874
+    },
+    {
+      "hour": 15,
+      "district": 19,
+      "count": 19867
+    },
+    {
+      "hour": 9,
+      "district": 7,
+      "count": 19782
+    },
+    {
+      "hour": 23,
+      "district": 3,
+      "count": 19768
+    },
+    {
+      "hour": 15,
+      "district": 5,
+      "count": 19739
+    },
+    {
+      "hour": 22,
+      "district": 2,
+      "count": 19690
+    },
+    {
+      "hour": 22,
+      "district": 15,
+      "count": 19618
+    },
+    {
+      "hour": 20,
+      "district": 18,
+      "count": 19602
+    },
+    {
+      "hour": 21,
+      "district": 15,
+      "count": 19593
+    },
+    {
+      "hour": 23,
+      "district": 12,
+      "count": 19565
+    },
+    {
+      "hour": 0,
+      "district": 15,
+      "count": 19461
+    },
+    {
+      "hour": 9,
+      "district": 3,
+      "count": 19445
+    },
+    {
+      "hour": 11,
+      "district": 3,
+      "count": 19445
+    },
+    {
+      "hour": 16,
+      "district": 19,
+      "count": 19371
+    },
+    {
+      "hour": 19,
+      "district": 1,
+      "count": 19258
+    },
+    {
+      "hour": 10,
+      "district": 2,
+      "count": 19150
+    }
+  ]
+}

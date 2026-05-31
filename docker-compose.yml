@@ -1,0 +1,84 @@
+version: "3.9"
+
+# ── Red interna del sistema ────────────────────────────────────────────────────
+networks:
+  crimes_net:
+    driver: bridge
+
+# ── Volúmenes persistentes ─────────────────────────────────────────────────────
+volumes:
+  mongo_data:
+  redis_data:
+  loader_output:
+
+services:
+
+  # ── Parte A: Cargador de datos concurrente ───────────────────────────────────
+  loader:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crimes_loader
+    environment:
+      WORKERS: "8"            # goroutines trabajadoras
+      CHUNK_SIZE: "5000"      # líneas por bloque
+      VERBOSE: "true"
+      DATA_FILE: "/app/data/crimes.csv"
+      OUTPUT_DIR: "/app/output"
+    volumes:
+      - ./data:/app/data:ro            # Dataset CSV (solo lectura)
+      - loader_output:/app/output      # Resultados limpios
+    networks:
+      - crimes_net
+    # El loader se ejecuta una vez y termina (no es un servicio persistente)
+    restart: "no"
+
+  # ── MongoDB: almacenamiento persistente ─────────────────────────────────────
+  mongo:
+    image: mongo:7.0
+    container_name: crimes_mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: chicago_crimes
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - crimes_net
+    restart: unless-stopped
+
+  # ── Redis: caché de predicciones precalculadas ───────────────────────────────
+  redis:
+    image: redis:7.2-alpine
+    container_name: crimes_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - crimes_net
+    restart: unless-stopped
+
+  # ── Nodo ML (placeholder — Parte B del proyecto) ─────────────────────────────
+  # ml_node:
+  #   build:
+  #     context: ./ml_node
+  #   depends_on:
+  #     - loader
+  #   networks:
+  #     - crimes_net
+
+  # ── API REST (placeholder — Parte C del proyecto) ────────────────────────────
+  # api:
+  #   build:
+  #     context: ./api
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - mongo
+  #     - redis
+  #   networks:
+  #     - crimes_net
