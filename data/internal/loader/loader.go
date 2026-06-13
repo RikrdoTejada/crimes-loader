@@ -24,8 +24,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"crimes-loader/internal/cleaner"
-	"crimes-loader/internal/models"
+	"crimes-loader/data/internal/cleaner"
+	"crimes-loader/data/internal/models"
 )
 
 // Config parametriza el comportamiento del cargador concurrente.

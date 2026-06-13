@@ -1,5 +1,3 @@
-version: "3.9"
-
 # ── Red interna del sistema ────────────────────────────────────────────────────
 networks:
   crimes_net:
@@ -9,7 +7,6 @@ networks:
 volumes:
   mongo_data:
   redis_data:
-  loader_output:
 
 services:
 
@@ -26,11 +23,32 @@ services:
       DATA_FILE: "/app/data/crimes.csv"
       OUTPUT_DIR: "/app/output"
     volumes:
-      - ./data:/app/data:ro            # Dataset CSV (solo lectura)
-      - loader_output:/app/output      # Resultados limpios
+      - ./data:/app/data               # Dataset CSV y salida generada
+      - ./data/output:/app/output      # Resultados limpios y sample para ML
     networks:
       - crimes_net
     # El loader se ejecuta una vez y termina (no es un servicio persistente)
+    restart: "no"
+
+  # ── Nodo ML: entrenamiento del modelo Random Forest ───────────────────────
+  trainer:
+    build:
+      context: ./ml
+      dockerfile: Dockerfile
+    image: crimes-loader-trainer:latest
+    depends_on:
+      loader:
+        condition: service_completed_successfully
+    command:
+      - -data
+      - ${DATA_FILE:-/output/clean_records_sample.json}
+      - -out
+      - ${OUTPUT_FILE:-/output/train_results.json}
+    volumes:
+      - ./data:/data:ro
+      - ./data/output:/output
+    networks:
+      - crimes_net
     restart: "no"
 
   # ── MongoDB: almacenamiento persistente ─────────────────────────────────────

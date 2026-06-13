@@ -5,11 +5,15 @@ WORKDIR /app
 COPY go.mod ./
 RUN go mod download
 
-COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -o crimes-loader ./cmd/loader
+COPY data/cmd/loader ./data/cmd/loader
+COPY data/internal/cleaner ./data/internal/cleaner
+COPY data/internal/loader ./data/internal/loader
+COPY data/internal/models ./data/internal/models
+COPY data/internal/pipeline ./data/internal/pipeline
+RUN CGO_ENABLED=0 GOOS=linux go build -o crimes-loader ./data/cmd/loader
 
 # ── Runtime stage ─────────────────────────────────────────────────────────────
-FROM alpine:3.19
+FROM alpine:3.22
 
 WORKDIR /app
 COPY --from=builder /app/crimes-loader .

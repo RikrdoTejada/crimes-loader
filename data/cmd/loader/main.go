@@ -23,8 +23,8 @@ import (
 	"runtime"
 	"time"
 
-	"crimes-loader/internal/loader"
-	"crimes-loader/internal/pipeline"
+	"crimes-loader/data/internal/loader"
+	"crimes-loader/data/internal/pipeline"
 )
 
 func main() {

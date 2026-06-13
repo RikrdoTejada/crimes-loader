@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"crimes-loader/internal/loader"
-	"crimes-loader/internal/models"
+	"crimes-loader/data/internal/loader"
+	"crimes-loader/data/internal/models"
 )
 
 // generateTestCSV crea un archivo CSV temporal con n registros válidos.

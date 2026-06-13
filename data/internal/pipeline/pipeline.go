@@ -11,8 +11,8 @@ import (
 	"sort"
 	"time"
 
-	"crimes-loader/internal/loader"
-	"crimes-loader/internal/models"
+	"crimes-loader/data/internal/loader"
+	"crimes-loader/data/internal/models"
 )
 
 // Pipeline orquesta el proceso de carga de datos concurrente.

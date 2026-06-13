@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"crimes-loader/internal/models"
+	"crimes-loader/data/internal/models"
 )
 
 // Formato de fecha usado en el dataset de Chicago: "01/02/2006 03:04:05 PM"
